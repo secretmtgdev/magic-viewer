@@ -11,15 +11,15 @@ export default function Card(props: ICardProps) {
     // No dependencies
     useEffect(() => {
         async function getCard() {
-        const card = await Scry.Cards.byName(cardName);
-        const imgUrl = card.getFrontImageURI("png");
-        if (imgUrl) {
-            setCardImgURL(imgUrl);
-        }
+            const card = await Scry.Cards.byName(cardName);
+            const imgUrl = card.getFrontImageURI("png");
+            if (imgUrl) {
+                setCardImgURL(imgUrl);
+            }
         }
     
         if (!cardImgURL) {
-        getCard();
+            getCard();
         }
     }, [cardImgURL]);
     
