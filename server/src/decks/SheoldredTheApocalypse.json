@@ -1,0 +1,88 @@
+{
+    "name": "Drain game",
+    "commander": "Sheoldred the Apocalypse",
+    "sections": [
+        {
+            "name": "Draw Spells",
+            "cardList": [
+                { 
+                    "name": "Mikokoro, Center of the Sea" 
+                },
+                {
+                    "name": "Arch of Orazca"
+                },
+                {
+                    "name": "Geier Reach Sanitarium"
+                },
+                {
+                    "name": "Castle Locthwain"
+                },
+                {
+                    "name": "War Room"
+                },
+                {
+                    "name": "Memory Jar"
+                },
+                {
+                    "name": "Temple Bell"
+                },
+                {
+                    "name": "Promise of Power"
+                },
+                {
+                    "name": "Peer into the Abyss"
+                },
+                {
+                    "name": "Phyrexian Arena"
+                },
+                {
+                    "name": "Ancient Craving"
+                },
+                {
+                    "name": "Night's Whisper"
+                },
+                {
+                    "name": "Dark Deal"
+                },
+                {
+                    "name": "Pain's Reward"
+                },
+                {
+                    "name": "Ambition's Cost"
+                },
+                {
+                    "name": "Infernal Contract"
+                },
+                {
+                    "name": "Cruel Bargain"
+                },
+                {
+                    "name": "Infernal Tribute"
+                },
+                {
+                    "name": "Necropotence"
+                }
+            ]
+        },
+        {
+            "name": "Card Advantage",
+            "cardList": [
+                {
+                    "name": "Dark Confidant"
+                },
+                {
+                    "name": "Dark Tutelage"
+                },
+                {
+                    "name": "Bolas's Citadel"
+                },
+                {
+                    "name": "Keen Duelist"
+                },
+                {
+                    "name": "Hostile Negotiations"
+                }
+            ]
+        }
+    ]
+}
