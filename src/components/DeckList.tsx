@@ -1,5 +1,5 @@
 import { IDeckListProps } from "../utils/Interfaces";
-import { TCard, TCardGroup } from "../utils/Types";
+import { TCardGroup } from "../utils/Types";
 import CardGrid from "./CardGrid";
 
 // Avoid changing props

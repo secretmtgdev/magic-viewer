@@ -1,4 +1,3 @@
-import './App.css';
 import DeckList from './components/DeckList';
 
 function App() {
