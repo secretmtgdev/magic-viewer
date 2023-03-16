@@ -1,0 +1,7 @@
+{
+    "username": "secretmtgdev",
+    "password": "xxxxxxxxx",
+    "connectionString": "mongodb+srv://secretmtgdev:<password>@meanstackexample.o8xkgtc.mongodb.net/?retryWrites=true&w=majority",
+    "databaseName": "meanStackExample",
+    "collectionName": "decks"
+}
