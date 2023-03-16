@@ -1,5 +1,6 @@
 export type TCard = {
     name: string;
+    imgUrl?: string;
 }
 
 export type TCardGroup = {

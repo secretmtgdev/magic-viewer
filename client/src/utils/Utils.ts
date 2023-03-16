@@ -1,4 +1,5 @@
-import { TDeckList } from "./Types";
+import { TCard, TDeckList } from "./Types";
+import * as Scry from 'scryfall-sdk';
 
 const hostname = 'localhost';
 const port = 8081;
@@ -16,4 +17,15 @@ export const getDeckData = async (deckName: string) => {
     .then(deckData => JSON.parse(deckData))
     .catch(err => console.error(err));
     return deckJson;
+}
+
+export const convertToCollection = (cardList: TCard[]) => {
+    return cardList.map(card => Scry.CardIdentifier.byName(card.name));
+}
+
+export const convertCollectionToCards = async (cardList: Scry.CardIdentifier[]) => {
+    const cards = await Scry.Cards.collection(...cardList).waitForAll();
+    const tCards = cards.map(card => ({ name: card.name, imgUrl: card.getFrontImageURI("png") }));
+    console.log(tCards)
+    return tCards;
 }

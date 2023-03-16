@@ -3,23 +3,12 @@
     "commander": "Sheoldred the Apocalypse",
     "sections": [
         {
+            "name": "Commander",
+            "cardList": [{ "name": "Sheoldred the Apocalypse" }]
+        },
+        {
             "name": "Draw Spells",
-            "cardList": [
-                { 
-                    "name": "Mikokoro, Center of the Sea" 
-                },
-                {
-                    "name": "Arch of Orazca"
-                },
-                {
-                    "name": "Geier Reach Sanitarium"
-                },
-                {
-                    "name": "Castle Locthwain"
-                },
-                {
-                    "name": "War Room"
-                },
+            "cardList": [                
                 {
                     "name": "Memory Jar"
                 },
@@ -61,6 +50,21 @@
                 },
                 {
                     "name": "Necropotence"
+                },
+                { 
+                    "name": "Mikokoro, Center of the Sea" 
+                },
+                {
+                    "name": "Arch of Orazca"
+                },
+                {
+                    "name": "Geier Reach Sanitarium"
+                },
+                {
+                    "name": "Castle Locthwain"
+                },
+                {
+                    "name": "War Room"
                 }
             ]
         },
@@ -81,6 +85,271 @@
                 },
                 {
                     "name": "Hostile Negotiations"
+                }
+            ]
+        },
+        {
+            "name": "Tutors",
+            "cardList": [
+                {
+                    "name": "Expedition Map"
+                },
+                {
+                    "name": "Praetor's Grasp"
+                },
+                {
+                    "name": "Demonic Tutor"
+                },
+                {
+                    "name": "Vampiric Tutor"
+                },
+                {
+                    "name": "Urza's Saga"
+                }
+            ]
+        },
+        {
+            "name": "Acceleration",
+            "cardList": [
+                {
+                    "name": "K'rrik, Son of Yawgmoth"
+                },
+                {
+                    "name": "Blood Celebrant"
+                },
+                {
+                    "name": "Nykthos, Shrine to Nix"
+                },                
+                {
+                    "name": "Sol Ring"
+                },
+                {
+                    "name": "Arcane Signet"
+                },
+                {
+                    "name": "Lotus Petal"
+                },
+                {
+                    "name": "Chrome Mox"
+                },
+                {
+                    "name": "Mox Diamond"
+                },
+                {
+                    "name": "Mana Crypt"
+                },
+                {
+                    "name": "Mana Vault"
+                },
+                {
+                    "name": "Grim Monolith"
+                },
+                {
+                    "name": "Jeweled Lotus"
+                },
+                {
+                    "name": "Mox Opal"
+                },
+                {
+                    "name": "Mox Amber"
+                },
+                {
+                    "name": "Overeager Apprentice"
+                },
+                {
+                    "name": "Cabal Ritual"
+                },
+                {
+                    "name": "Bog Witch"
+                },
+                {
+                    "name": "Dark Ritual"
+                },
+                {
+                    "name": "Blood Pet"
+                },
+                {
+                    "name": "Ancient Tomb"
+                },
+                {
+                    "name": "Peat Bog"
+                },
+                {
+                    "name": "Ebon Stronghold"
+                },
+                {
+                    "name": "Lotus Field"
+                },
+                {
+                    "name": "Cabal Coffers"
+                },
+                {
+                    "name": "Gemstone Caverns"
+                }
+            ]
+        },
+        {
+            "name": "Control",
+            "cardList": [                
+                {
+                    "name": "Sudden Spoiling"
+                },
+                {
+                    "name": "Black Sun's Zenith"
+                },
+                {
+                    "name": "Kagemaro, First to Suffer"
+                },
+                {
+                    "name": "Toxic Deluge"
+                },
+                {
+                    "name": "Chains of Mephistopheles"
+                },
+                {
+                    "name": "Sadistic Sacrament"
+                },
+                {
+                    "name": "Bojuka Bog"
+                },
+                {
+                    "name": "Maze of Ith"
+                },
+                {
+                    "name": "Strip Mine"
+                },
+                {
+                    "name": "Blast Zone"
+                }
+            ]
+        },
+        {
+            "name": "Life loss",
+            "cardList": [
+                {
+                    "name": "Archfiend of Despair"
+                },
+                {
+                    "name": "Wound Reflection"
+                },
+                {
+                    "name": "Massacre Wurm"
+                },
+                {
+                    "name": "Painful Quandry"
+                },
+                {
+                    "name": "Gray Merchant of Asphodel"
+                },
+                {
+                    "name": "Kokusho, the Evening Star"
+                },
+                {
+                    "name": "Exsanguinate"
+                },
+                {
+                    "name": "Polluted Bonds"
+                },
+                {
+                    "name": "Fate Unraveler"
+                },
+                {
+                    "name": "BloodChief Ascension"
+                },
+                {
+                    "name": "Underworld Dreams"
+                }
+            ]
+        },
+        {
+            "name": "Second Life",
+            "cardList": [
+                {
+                    "name": "Yawgmoth's Will"
+                },
+                {
+                    "name": "Reanimate"
+                },
+                {
+                    "name": "Crucible of Worlds"
+                },
+                {
+                    "name": "Agadeem's Awakening"
+                },
+                {
+                    "name": "Takenuma, Abandoned Mire"
+                },
+                {
+                    "name": "Volrath's Stronghold"
+                },
+                {
+                    "name": "Petrified Field"
+                },
+                {
+                    "name": "Command Beacon"
+                }
+            ]
+        },
+        {
+            "name": "Copy things",
+            "cardList": [
+                {
+                    "name": "Thespian's Stage"
+                },
+                {
+                    "name": "Vesuva"
+                },
+                {
+                    "name": "The Mycosynth Gardens"
+                }
+            ]
+        },
+        {
+            "name": "Miscellaneous",
+            "cardList": [
+                {
+                    "name": "Candelabra of Tawnos"
+                },
+                {
+                    "name": "Exquisite Blood"
+                },
+                {
+                    "name": "Temporal Extortion"
+                },
+                {
+                    "name": "Saw in Half"
+                },
+                {
+                    "name": "Urborg, Tomb of Yawgmoth"
+                },
+                {
+                    "name": "Reliquary Tower"
+                },
+                {
+                    "name": "Deserted Temple"
+                }
+            ]
+        },
+        {
+            "name": "Basics",
+            "cardList": [
+                {
+                    "name": "Swamp"
+                },
+                {
+                    "name": "Swamp"
+                },
+                {
+                    "name": "Swamp"
+                },
+                {
+                    "name": "Swamp"
+                },
+                {
+                    "name": "Swamp"
+                },
+                {
+                    "name": "Swamp"
                 }
             ]
         }
