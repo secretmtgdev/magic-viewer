@@ -31,10 +31,12 @@ function createDeckCollection() {
     );
 
     const deckModel = mongoose.model('Deck', deckSchema);
-    deckModel.createCollection()
-    .then(collection => {
-        console.log('Deck collection has been created');
-    });
+    if (!deckModel.exists()) {
+        deckModel.createCollection()
+        .then(collection => {
+            console.log('Deck collection has been created');
+        });
+    }
 }
 
 function connectToDatabase(data) {

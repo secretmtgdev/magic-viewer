@@ -1,5 +1,6 @@
 export type TCard = {
     name: string;
+    manaValue: number;
     imgUrl?: string;
 }
 

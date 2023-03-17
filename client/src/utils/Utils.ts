@@ -25,7 +25,7 @@ export const convertToCollection = (cardList: TCard[]) => {
 
 export const convertCollectionToCards = async (cardList: Scry.CardIdentifier[]) => {
     const cards = await Scry.Cards.collection(...cardList).waitForAll();
-    const tCards = cards.map(card => ({ name: card.name, imgUrl: card.getFrontImageURI("png") }));
+    const tCards = cards.map(card => ({ name: card.name, manaValue: card.cmc, imgUrl: card.getFrontImageURI("png") }));
     console.log(tCards)
     return tCards;
 }

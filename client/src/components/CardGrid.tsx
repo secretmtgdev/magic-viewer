@@ -27,7 +27,7 @@ export default function CardGrid(props: ICardGridProps) {
         <div className='card-grid'>
             <h2>{props.name}</h2>
             {                
-                cardCollection.map((props, i) => <Card {...props} />)
+                cardCollection.map((cardData, i) => <Card card={cardData} />)
             }
         </div>
     )
