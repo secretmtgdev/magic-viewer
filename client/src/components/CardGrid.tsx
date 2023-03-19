@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ICardGridProps } from '../utils/Interfaces';
 import { TCard } from '../utils/Types';
 import { convertCollectionToCards, convertToCollection } from '../utils/Utils';
-import Card from './Card';
+import Card from './Card/Card';
 
 // React is a JavaScript library, JSX is a syntax extension
 export default function CardGrid(props: ICardGridProps) {
@@ -27,7 +27,7 @@ export default function CardGrid(props: ICardGridProps) {
         <div className='card-grid'>
             <h2>{props.name}</h2>
             {                
-                cardCollection.map((cardData, i) => <Card card={cardData} />)
+                cardCollection.map((cardData, i) => <Card key={i} card={cardData} />)
             }
         </div>
     )
