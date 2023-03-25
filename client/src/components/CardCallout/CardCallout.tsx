@@ -6,7 +6,7 @@ import './CardCallout.css';
 
 export default function CardCallout({cardProps, hidden}: ICardCalloutProps) {
     return (
-        <Callout id="card-callout" hidden={hidden} >
+        <Callout id="card-callout" hidden={hidden} target={document.getElementById(cardProps.card.name)}>
             <CardImage {...cardProps} />
         </Callout>
     )
