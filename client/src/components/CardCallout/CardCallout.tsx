@@ -1,6 +1,6 @@
 import { Callout } from "@fluentui/react";
 import { ICardCalloutProps } from "../../utils/Interfaces";
-import CardImage from "../CardImage";
+import CardImage from "../CardImage/CardImage";
 
 import './CardCallout.css';
 

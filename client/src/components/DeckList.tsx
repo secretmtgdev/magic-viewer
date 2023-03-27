@@ -2,7 +2,7 @@ import { IDeckListProps } from "../utils/Interfaces";
 import { TDeckList } from "../utils/Types";
 import { getDeckData } from "../utils/Utils";
 import { useEffect, useState } from 'react';
-import CardGrid from "./CardGrid";
+import CardGrid from "./CardGrid/CardGrid";
 
 const defaultDecklist: TDeckList = {
     name: '',

@@ -1,5 +1,5 @@
-import { CardConstants } from "../utils/Constants";
-import { ICardProps } from "../utils/Interfaces";
+import { CardConstants } from "../../utils/Constants";
+import { ICardProps } from "../../utils/Interfaces";
 
 export const CardImage = ({card, size}: ICardProps) => {
     return (

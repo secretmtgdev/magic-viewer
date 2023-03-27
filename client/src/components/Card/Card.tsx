@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ICardProps } from '../../utils/Interfaces';
 import CardCallout from '../CardCallout/CardCallout';
-import CardImage from '../CardImage';
+import CardImage from '../CardImage/CardImage';
 
 import './Card.css';
 
