@@ -12,12 +12,12 @@ export default function Card(cardProps: ICardProps) {
     // Multiline jsx must be wrapped in parenthesis
     return (
         <>
-            <span 
+            <div 
                 className='cardContainer' 
                 onClick={() => setHiddenState(!hiddenState)}
                 id={cardProps.card.name}>
                 <CardImage {...cardProps} />
-            </span>
+            </div>
             <CardCallout cardProps={cardProps} hidden={hiddenState} />
         </>        
     );

@@ -12,7 +12,7 @@ export default function CardGrid(props: ICardGridProps) {
         async function getCollection() {            
             const cardList = await convertCollectionToCards(collection);
             if (cardList.length !== 0) {
-                setCardCollection(cardList);
+                setCardCollection(cardList);                
             }
         }
         
