@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ICardGridProps } from '../../utils/Interfaces';
 import { TCard } from '../../utils/Types';
-import { convertCollectionToCards, convertToCollection } from '../../utils/Utils';
+import { convertCollectionToCards, convertToCollection, rotateRowImages } from '../../utils/Utils';
 import Card from '../Card/Card';
 
 // React is a JavaScript library, JSX is a syntax extension
@@ -12,7 +12,9 @@ export default function CardGrid(props: ICardGridProps) {
         async function getCollection() {            
             const cardList = await convertCollectionToCards(collection);
             if (cardList.length !== 0) {
-                setCardCollection(cardList);                
+                setCardCollection(cardList);     
+                const cardContainers = document.getElementsByClassName('cardContainer');
+                rotateRowImages(cardContainers as HTMLCollectionOf<HTMLElement>);    
             }
         }
         

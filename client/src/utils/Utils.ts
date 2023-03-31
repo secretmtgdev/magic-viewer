@@ -15,7 +15,9 @@ export const getDeckData = async (deckName: string) => {
     // JSON string
     .then(deckData => deckData.json())
     .then(deckData => JSON.parse(deckData))
-    .catch(err => console.error(err));
+    .catch(err => {
+        console.error(err);
+    });
     return deckJson;
 }
 
@@ -24,7 +26,7 @@ export const convertToCollection = (cardList: TCard[]) => {
 }
 
 export const convertCollectionToCards = async (cardList: Scry.CardIdentifier[]) => {
-    const cards = await Scry.Cards.collection(...cardList).waitForAll();
+    const cards = await Scry.Cards.collection(...cardList).waitForAll()
     const tCards = cards.map(card => ({ name: card.name, manaValue: card.cmc, imgUrl: card.getFrontImageURI("png") }));
     return tCards;
 }
