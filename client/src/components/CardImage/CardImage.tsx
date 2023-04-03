@@ -1,5 +1,7 @@
 import { CardConstants } from "../../utils/Constants";
 import { ICardProps } from "../../utils/Interfaces";
+
+// Lazy loading component to help improve the loading time of the site
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const CardImage = ({card, size}: ICardProps) => {

@@ -4,9 +4,6 @@
 
 .cardContainer:hover {
     cursor: pointer;
-}
-
-.cardContainer img:hover {
     border: 10px solid blue;
     transition: 350ms ease;
     border-radius: 10px;
