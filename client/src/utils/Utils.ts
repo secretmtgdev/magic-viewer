@@ -1,4 +1,4 @@
-import { TCard, TDeckList } from "./Types";
+import { TCard, TDeckList, TPrice } from "./Types";
 import * as Scry from 'scryfall-sdk';
 
 const hostname = 'localhost';
@@ -27,7 +27,15 @@ export const convertToCollection = (cardList: TCard[]) => {
 
 export const convertCollectionToCards = async (cardList: Scry.CardIdentifier[]) => {
     const cards = await Scry.Cards.collection(...cardList).waitForAll()
-    const tCards = cards.map(card => ({ name: card.name, manaValue: card.cmc, imgUrl: card.getFrontImageURI("png") }));
+    const tCards = cards.map(card => {
+        const price: TPrice = {
+            currency: 'English',
+            nonFoil: card.prices['usd'] ?? 'No non-foil price',
+            foil:  card.prices['usd_foil'] ?? 'No foil price'
+        };
+
+        return { name: card.name, manaValue: card.cmc, imgUrl: card.getFrontImageURI("png"), price };
+    });
     return tCards;
 }
 
@@ -57,4 +65,8 @@ export const rotateRowImages = (cardList: HTMLCollectionOf<HTMLElement>) => {
         }
     }
 
+}
+
+export const formalizeWord = (word: string) => {
+    return word[0].toUpperCase() + word.slice(1);
 }

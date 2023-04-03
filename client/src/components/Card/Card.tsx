@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ICardProps } from '../../utils/Interfaces';
 import CardCallout from '../CardCallout/CardCallout';
 import CardImage from '../CardImage/CardImage';
+import PriceContainer from '../PriceContainer/PriceContainer';
 
 import './Card.css';
 
@@ -17,6 +18,7 @@ export default function Card(cardProps: ICardProps) {
                 onClick={() => setHiddenState(!hiddenState)}
                 id={cardProps.card.name}>
                 <CardImage {...cardProps} />
+                <PriceContainer {...cardProps.card.price} />
             </div>
             <CardCallout cardProps={cardProps} hidden={hiddenState} />
         </>        

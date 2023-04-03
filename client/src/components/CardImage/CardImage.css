@@ -1,0 +1,3 @@
+.card-image-wrapper {
+    display: block !important; /* Avoid extra div CSS adjustment. Need to override lazyloads inline styling. */
+}

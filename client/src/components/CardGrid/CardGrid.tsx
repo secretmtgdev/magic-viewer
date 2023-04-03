@@ -13,8 +13,6 @@ export default function CardGrid(props: ICardGridProps) {
             const cardList = await convertCollectionToCards(collection);
             if (cardList.length !== 0) {
                 setCardCollection(cardList);     
-                const cardContainers = document.getElementsByClassName('cardContainer');
-                rotateRowImages(cardContainers as HTMLCollectionOf<HTMLElement>);    
             }
         }
         
