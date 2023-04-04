@@ -16,7 +16,7 @@ export const getDeckData = async (deckName: string) => {
     .then(deckData => deckData.json())
     .then(deckData => JSON.parse(deckData))
     .catch(err => {
-        console.error(err);
+        throw err;
     });
     return deckJson;
 }

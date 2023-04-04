@@ -14,13 +14,23 @@ const defaultDecklist: TDeckList = {
 export default function DeckList(props: IDeckListProps) {
     const condensedName = props.name.split(' ').join('');
     const [deckInformation, setDeckInformation] = useState<TDeckList>(defaultDecklist);
+    const [fetchError, setFetchError] = useState<boolean>(false);
 
     useEffect(() => {
         async function getDeck() {
-            const deckInfo: TDeckList = await getDeckData(condensedName);
-            if (deckInfo) {
-                setDeckInformation(deckInfo);
+            try 
+            {
+                const deckInfo: TDeckList = await getDeckData(condensedName);
+                if (deckInfo) {
+                    setDeckInformation(deckInfo);
+                    setFetchError(false);
+                }
             }
+            catch (err)
+            {
+                // place default component
+                setFetchError(true);
+            }            
         }
     
         if (deckInformation.name === defaultDecklist.name) {
@@ -28,7 +38,7 @@ export default function DeckList(props: IDeckListProps) {
         }
     }, [deckInformation, condensedName]);
 
-    return (
+    const deckInformationComponent = (
         <>
             <h1>{deckInformation.name}</h1>
             <h2>Commander: {deckInformation.commander}</h2>
@@ -36,6 +46,14 @@ export default function DeckList(props: IDeckListProps) {
                 deckInformation.sections.map((cardGroup, idx) => <CardGrid key={idx} {...cardGroup} />):
                 'No deck information'
             }
+        </>
+    );
+
+    return (
+        <>
+            {
+                !fetchError ? deckInformationComponent : <h1>Could not fetch decklist information</h1>
+            }            
         </>        
     );
 }
