@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ICardGridProps } from '../../utils/Interfaces';
+import { hashPhrase } from '../../utils/StringUtils';
 import { TCard } from '../../utils/Types';
 import { convertCollectionToCards, convertToCollection, rotateRowImages } from '../../utils/Utils';
 import Card from '../Card/Card';
@@ -27,7 +28,7 @@ export default function CardGrid(props: ICardGridProps) {
         <div className='card-grid'>
             <h2>{props.name}</h2>
             {                
-                cardCollection.map((cardData, i) => <Card key={i} card={cardData} />)
+                cardCollection.map((cardData, i) => <Card key={`${cardData.name}-${hashPhrase(cardData.name)}-${i}`} card={cardData} />)
             }
         </div>
     )

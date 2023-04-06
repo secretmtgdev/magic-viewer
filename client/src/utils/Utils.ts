@@ -66,7 +66,3 @@ export const rotateRowImages = (cardList: HTMLCollectionOf<HTMLElement>) => {
     }
 
 }
-
-export const formalizeWord = (word: string) => {
-    return word[0].toUpperCase() + word.slice(1);
-}

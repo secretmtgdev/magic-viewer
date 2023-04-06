@@ -3,6 +3,7 @@ import { TDeckList } from "../utils/Types";
 import { getDeckData } from "../utils/Utils";
 import { useEffect, useState } from 'react';
 import CardGrid from "./CardGrid/CardGrid";
+import { hashPhrase } from "../utils/StringUtils";
 
 const defaultDecklist: TDeckList = {
     name: '',
@@ -43,7 +44,7 @@ export default function DeckList(props: IDeckListProps) {
             <h1>{deckInformation.name}</h1>
             <h2>Commander: {deckInformation.commander}</h2>
             {deckInformation.sections ?
-                deckInformation.sections.map((cardGroup, idx) => <CardGrid key={idx} {...cardGroup} />):
+                deckInformation.sections.map((cardGroup, idx) => <CardGrid key={`${cardGroup.name}-${hashPhrase(cardGroup.name)}`} {...cardGroup} />):
                 'No deck information'
             }
         </>
