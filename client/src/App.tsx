@@ -1,4 +1,4 @@
-import DeckList from './components/DeckList';
+import DeckList from './components/DeckList/DeckList';
 
 function App() {
   

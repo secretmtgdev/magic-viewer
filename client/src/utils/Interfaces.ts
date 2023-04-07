@@ -1,4 +1,4 @@
-import { TCard } from "./Types";
+import { TCard, TCardGroup } from "./Types";
 
 export interface ICardCalloutProps {
     cardProps: ICardProps;
@@ -17,4 +17,10 @@ export interface ICardGridProps {
 
 export interface IDeckListProps {
     name: string;
+}
+
+export interface IDeckInformationProps {
+    name: string;
+    commander: string;
+    sections: TCardGroup[];
 }

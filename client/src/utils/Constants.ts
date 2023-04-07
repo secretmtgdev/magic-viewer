@@ -8,3 +8,11 @@ export const TitleConstants = {
     DEFAULT_LETTERS_IN_WORD: 5,
     DEFAULT_LETTERS_IN_PHRASE: 15
 }
+
+export const Default = {
+    Decklist: {
+        name: '',
+        commander: '',
+        sections: []
+    } 
+}
