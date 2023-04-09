@@ -1,9 +1,11 @@
+import React from 'react';
+import Card from '../Card/Card';
+
 import { useEffect, useState } from 'react';
 import { ICardGridProps } from '../../utils/Interfaces';
 import { hashPhrase } from '../../utils/StringUtils';
 import { TCard } from '../../utils/Types';
 import { convertCollectionToCards, convertToCollection, rotateRowImages } from '../../utils/Utils';
-import Card from '../Card/Card';
 
 // React is a JavaScript library, JSX is a syntax extension
 export default function CardGrid(props: ICardGridProps) {

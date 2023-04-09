@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders the card 1`] = `
+[
+  <div
+    className="cardContainer"
+    id="card"
+    onClick={[Function]}
+  >
+    <span
+      className="card-image-wrapper lazy-load-image-background "
+      style={
+        {
+          "backgroundImage": "url(../../images/placeholder.jgpeg)",
+          "backgroundSize": "100% 100%",
+          "color": "transparent",
+          "display": "inline-block",
+          "height": 275,
+          "width": 200,
+        }
+      }
+    >
+      <span
+        className=""
+        style={
+          {
+            "display": "inline-block",
+            "height": 275,
+            "width": 200,
+          }
+        }
+      />
+    </span>
+    <p>
+      Currency
+      : 
+      usd
+    </p>
+    <p>
+      NonFoil
+      : 
+      1.0
+    </p>
+    <p>
+      Foil
+      : 
+      2.0
+    </p>
+  </div>,
+  <span
+    className="ms-layer"
+  >
+    <div
+      className="ms-Fabric ms-Layer-content content-111"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onDoubleClick={[Function]}
+      onDrag={[Function]}
+      onDragEnd={[Function]}
+      onDragEnter={[Function]}
+      onDragExit={[Function]}
+      onDragLeave={[Function]}
+      onDragOver={[Function]}
+      onDragStart={[Function]}
+      onDrop={[Function]}
+      onFocus={[Function]}
+      onInput={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      onMouseUp={[Function]}
+      onSubmit={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <div
+        className="ms-Callout-container container-113"
+        style={
+          {
+            "visibility": "hidden",
+          }
+        }
+      >
+        <div
+          className="ms-Callout root-114"
+          hidden={true}
+          id="card-callout"
+          style={
+            {
+              "filter": "opacity(0)",
+              "opacity": 0,
+              "pointerEvents": "none",
+            }
+          }
+          tabIndex={-1}
+        >
+          <div
+            className="ms-Callout-main calloutMain-117"
+            onKeyDown={[Function]}
+            onMouseDown={[Function]}
+            onMouseUp={[Function]}
+            style={
+              {
+                "maxHeight": "100%",
+                "outline": "none",
+                "overflowY": undefined,
+              }
+            }
+          >
+            <span
+              className="card-image-wrapper lazy-load-image-background "
+              style={
+                {
+                  "backgroundImage": "url(../../images/placeholder.jgpeg)",
+                  "backgroundSize": "100% 100%",
+                  "color": "transparent",
+                  "display": "inline-block",
+                  "height": 275,
+                  "width": 200,
+                }
+              }
+            >
+              <span
+                className=""
+                style={
+                  {
+                    "display": "inline-block",
+                    "height": 275,
+                    "width": 200,
+                  }
+                }
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </span>,
+]
+`;

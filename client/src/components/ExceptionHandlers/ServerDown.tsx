@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './Exception.css';
 
 export default function ServerDown() {

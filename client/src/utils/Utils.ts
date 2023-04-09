@@ -27,6 +27,7 @@ export const convertToCollection = (cardList: TCard[]) => {
 
 export const convertCollectionToCards = async (cardList: Scry.CardIdentifier[]) => {
     const cards = await Scry.Cards.collection(...cardList).waitForAll()
+    console.error(cards);
     const tCards = cards.map(card => {
         const price: TPrice = {
             currency: 'English',

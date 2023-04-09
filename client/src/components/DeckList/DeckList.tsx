@@ -1,9 +1,11 @@
+import React from 'react';
+import ServerDown from "../ExceptionHandlers/ServerDown";
+import DeckInformation from "./DeckInformation";
+
 import { IDeckListProps } from "../../utils/Interfaces";
 import { TDeckList } from "../../utils/Types";
 import { getDeckData } from "../../utils/Utils";
 import { useEffect, useState } from 'react';
-import DeckInformation from "./DeckInformation";
-import ServerDown from "../ExceptionHandlers/ServerDown";
 import { Default } from "../../utils/Constants";
 
 // Avoid changing props

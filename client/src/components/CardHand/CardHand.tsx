@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { rotateRowImages } from "../../utils/Utils";
 
 export const CardHand = () => {

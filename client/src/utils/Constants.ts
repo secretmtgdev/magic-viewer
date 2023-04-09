@@ -16,3 +16,18 @@ export const Default = {
         sections: []
     } 
 }
+
+export const TestMocks = {
+    CardMock: {
+        card: {
+            name: 'card',
+            manaValue: 1,
+            price: {
+                currency: 'usd',
+                nonFoil: '1.0',
+                foil: '2.0'
+            },
+            imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_YCalozv20Oki516pDRvDiNfByLm_OxvEZc6_XN6TIw&s'
+        }
+    }
+}
