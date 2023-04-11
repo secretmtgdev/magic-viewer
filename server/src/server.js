@@ -84,3 +84,13 @@ app.get('/deckList/:deckName', (req, res) => {
         res.json(JSON.stringify(deckList));
     });
 });
+
+// Gets the set mappings 
+app.get('/allSets', (req, res) => {
+    fs.readFile(`${__dirname}/AllSets.json`, (err, data) => {
+        if (err) throw err;
+        
+        var setList = JSON.parse(data);
+        res.json(JSON.stringify(setList));
+    });
+})

@@ -16,10 +16,16 @@ export const getDeckData = async (deckName: string) => {
     // JSON string
     .then(deckData => deckData.json())
     .then(deckData => JSON.parse(deckData))
-    .catch(err => {
-        throw err;
-    });
+    .catch(err => { throw err });
     return deckJson;
+}
+
+export const getAllSets = async () => {
+    let allSets = await fetch(`http://${hostname}:${port}/allSets`, requestParams)
+    .then(setData => setData.json())
+    .then(setData => JSON.parse(setData))
+    .catch(err => { throw err });
+    return allSets;
 }
 
 export const convertToCollection = (cardList: TCard[]) => {
@@ -27,7 +33,7 @@ export const convertToCollection = (cardList: TCard[]) => {
 }
 
 export const convertCollectionToCards = async (cardList: Scry.CardIdentifier[]) => {
-    const cards = await Scry.Cards.collection(...cardList).waitForAll()
+    const cards = await Scry.Cards.collection(...cardList).waitForAll();
     const tCards = cards.map(card => {
         const price: TPrice = {
             currency: Currency[card.lang].name,
@@ -40,6 +46,7 @@ export const convertCollectionToCards = async (cardList: Scry.CardIdentifier[]) 
 
         return { name: card.name, manaValue: card.cmc, imgUrl, price };
     });
+
     return tCards;
 }
 
