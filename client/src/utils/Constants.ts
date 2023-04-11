@@ -1,3 +1,5 @@
+import { TCurrencyInfo } from "./Types"
+
 export const CardConstants = {
     DEFAULT_CARD_HEIGHT: 275,
     DEFAULT_CARD_WIDTH: 200
@@ -9,11 +11,15 @@ export const TitleConstants = {
     DEFAULT_LETTERS_IN_PHRASE: 15
 }
 
-export const Languages = {
-    usd: {
+export const Currency: {[key: string]: TCurrencyInfo} = {
+    'en': {
+        abbreviation: 'usd',
+        name: 'English',
         symbol: '$'
     },
-    eur: {
+    'eur': {
+        abbreviation: 'eur',
+        name: 'European',
         symbol: '€'
     }
 }

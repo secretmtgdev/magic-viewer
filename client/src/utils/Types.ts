@@ -21,3 +21,9 @@ export type TDeckList = {
     commander: string;
     sections: TCardGroup[];
 }
+
+export type TCurrencyInfo = {
+    abbreviation: string;
+    name: string;
+    symbol: string;
+}

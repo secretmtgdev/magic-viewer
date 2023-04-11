@@ -1,5 +1,5 @@
 import { TCard, TDeckList, TPrice } from "./Types";
-import { Languages } from "./Constants";
+import { Currency } from "./Constants";
 import * as Scry from 'scryfall-sdk';
 
 const hostname = 'localhost';
@@ -30,9 +30,10 @@ export const convertCollectionToCards = async (cardList: Scry.CardIdentifier[]) 
     const cards = await Scry.Cards.collection(...cardList).waitForAll()
     const tCards = cards.map(card => {
         const price: TPrice = {
-            currency: 'English',
-            nonFoil: `${Languages['usd'].symbol}${card.prices['usd']}` ?? 'No non-foil price',
-            foil:  `${Languages['usd'].symbol}${card.prices['usd']}` ?? 'No foil price'
+            currency: Currency[card.lang].name,
+            // Can't use string typing for Scry.Crad.Prices, it expects usd | usd_foil | eur | eur_foil ...
+            nonFoil: `${Currency[card.lang].symbol}${card.lang === 'en' ? card.prices['usd']: card.prices['eur']}` ?? 'No non-foil price',
+            foil:  `${Currency[card.lang].symbol}${card.lang === 'en' ? card.prices['usd_foil'] : card.prices['eur_foil']}` ?? 'No foil price'
         };
 
         const imgUrl = card.image_uris ? card.image_uris!['border_crop'] : card.getFrontImageURI('png');
