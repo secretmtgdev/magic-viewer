@@ -1,11 +1,4 @@
-.cardContainer {
+.card-container {
     display: inline-block;
     margin: 1.4em;
-}
-
-.cardContainer:hover {
-    cursor: pointer;
-    border: 10px solid blue;
-    transition: 350ms ease;
-    border-radius: 10px;
 }

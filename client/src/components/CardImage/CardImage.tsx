@@ -15,7 +15,8 @@ export const CardImage = ({card, size}: ICardProps) => {
             
             // Curly braces enable JavaScript in markup
             src={card.imgUrl}
-            placeholderSrc='../../images/placeholder.jgpeg'
+            placeholderSrc='../../images/placeholder.jpeg'
+            className='card-image-container'
 
             // Curly braces can only be used as texxt or attributes
             alt={card.name}

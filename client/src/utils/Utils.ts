@@ -1,4 +1,5 @@
 import { TCard, TDeckList, TPrice } from "./Types";
+import { Languages } from "./Constants";
 import * as Scry from 'scryfall-sdk';
 
 const hostname = 'localhost';
@@ -27,15 +28,16 @@ export const convertToCollection = (cardList: TCard[]) => {
 
 export const convertCollectionToCards = async (cardList: Scry.CardIdentifier[]) => {
     const cards = await Scry.Cards.collection(...cardList).waitForAll()
-    console.error(cards);
     const tCards = cards.map(card => {
         const price: TPrice = {
             currency: 'English',
-            nonFoil: card.prices['usd'] ?? 'No non-foil price',
-            foil:  card.prices['usd_foil'] ?? 'No foil price'
+            nonFoil: `${Languages['usd'].symbol}${card.prices['usd']}` ?? 'No non-foil price',
+            foil:  `${Languages['usd'].symbol}${card.prices['usd']}` ?? 'No foil price'
         };
 
-        return { name: card.name, manaValue: card.cmc, imgUrl: card.getFrontImageURI("png"), price };
+        const imgUrl = card.image_uris ? card.image_uris!['border_crop'] : card.getFrontImageURI('png');
+
+        return { name: card.name, manaValue: card.cmc, imgUrl, price };
     });
     return tCards;
 }

@@ -9,6 +9,15 @@ export const TitleConstants = {
     DEFAULT_LETTERS_IN_PHRASE: 15
 }
 
+export const Languages = {
+    usd: {
+        symbol: '$'
+    },
+    eur: {
+        symbol: '€'
+    }
+}
+
 export const Default = {
     Decklist: {
         name: '',

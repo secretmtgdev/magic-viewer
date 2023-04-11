@@ -1,3 +1,5 @@
+import React from "react";
+
 import CardGrid from "../CardGrid/CardGrid";
 import { hashPhrase } from "../../utils/StringUtils";
 import { IDeckInformationProps } from "../../utils/Interfaces";

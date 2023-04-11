@@ -1,7 +1,8 @@
+import React from 'react';
+
 import CardCallout from '../CardCallout/CardCallout';
 import CardImage from '../CardImage/CardImage';
 import PriceContainer from '../PriceContainer/PriceContainer';
-import React from 'react';
 
 import { useState } from 'react';
 import { ICardProps } from '../../utils/Interfaces';
@@ -15,10 +16,11 @@ export default function Card(cardProps: ICardProps) {
     // Multiline jsx must be wrapped in parenthesis
     return (
         <>
-            <div 
-                className='cardContainer' 
+            <div                  
                 onClick={() => setHiddenState(!hiddenState)}
-                id={cardProps.card.name}>
+                id={cardProps.card.name}
+                className='card-container'
+                >
                 <CardImage {...cardProps} />
                 <PriceContainer {...cardProps.card.price} />
             </div>

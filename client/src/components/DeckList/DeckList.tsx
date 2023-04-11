@@ -34,7 +34,7 @@ export default function DeckList(props: IDeckListProps) {
         if (deckInformation.name === Default.Decklist.name) {
             getDeck();
         }
-    }, [deckInformation, condensedName]);
+    }, [deckInformation, condensedName, fetchError]);
 
     return (
         <>
