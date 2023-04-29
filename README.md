@@ -39,6 +39,12 @@ Today is a big milestone. I really admire EdhRec and the pricing that they've se
 
 ![Image showcasing cards and prices.](https://raw.githubusercontent.com/secretmtgdev/magic-viewer/main/progress-images/magic-viewer-1.png)
 
+### April 29, 2023
+
+Haven't been pushing out a whole lot but I did fix up the wording functionality on pricing as well as the logic to handle null prices.
+
+![Image showcasing cards and prices (fix).](https://raw.githubusercontent.com/secretmtgdev/magic-viewer/main/progress-images/magic-viewer-2.png)
+
 _More details and features to come!_
 
 ## Miscellaneous notes

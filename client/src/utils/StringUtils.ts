@@ -1,7 +1,9 @@
 import { TitleConstants } from "./Constants";
 
 export const formalizeWord = (word: string) => {
-    return word[0].toUpperCase() + word.slice(1);
+    const firstCapital = word[0].toLocaleUpperCase() + word.slice(1);
+    const splitPhrase = firstCapital.split(/(?=[A-Z])/);
+    return splitPhrase.join(' ');
 }
 
 export const hashPhrase = (phrase: string): number => {
