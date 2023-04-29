@@ -35,11 +35,13 @@ export const convertToCollection = (cardList: TCard[]) => {
 export const convertCollectionToCards = async (cardList: Scry.CardIdentifier[]) => {
     const cards = await Scry.Cards.collection(...cardList).waitForAll();
     const tCards = cards.map(card => {
+        const nonFoilPrice = card.lang === 'en' ? card.prices['usd']: card.prices['eur'];
+        const foilPrice = card.lang === 'en' ? card.prices['usd_foil'] : card.prices['eur_foil'];
         const price: TPrice = {
             currency: Currency[card.lang].name,
             // Can't use string typing for Scry.Crad.Prices, it expects usd | usd_foil | eur | eur_foil ...
-            nonFoil: `${Currency[card.lang].symbol}${card.lang === 'en' ? card.prices['usd']: card.prices['eur']}` ?? 'No non-foil price',
-            foil:  `${Currency[card.lang].symbol}${card.lang === 'en' ? card.prices['usd_foil'] : card.prices['eur_foil']}` ?? 'No foil price'
+            nonFoil: `${nonFoilPrice ? `${Currency[card.lang].symbol}${nonFoilPrice}` : 'No non foil price'}`,
+            foil: `${foilPrice ? `${Currency[card.lang].symbol}${foilPrice}` : 'No foil price'}`
         };
 
         const imgUrl = card.image_uris ? card.image_uris!['border_crop'] : card.getFrontImageURI('png');
