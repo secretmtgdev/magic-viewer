@@ -1,7 +1,0 @@
-{
-    "username": "secretmtgdev",
-    "password": "bztlK7pj7eN5lhQH",
-    "connectionString": "mongodb+srv://secretmtgdev:<password>@meanstackexample.o8xkgtc.mongodb.net/?retryWrites=true&w=majority",
-    "databaseName": "meanStackExample",
-    "collectionName": "decks"
-}
