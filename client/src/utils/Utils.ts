@@ -77,5 +77,39 @@ export const rotateRowImages = (cardList: HTMLCollectionOf<HTMLElement>) => {
             right += 1;
         }
     }
+}
 
+// Bubble sort because it's fast on small collections
+export const sortByCmc = (cards: TCard[]) => bubbleSort(cards);
+
+export const sortByPrice = (cards: TCard[]) => bubbleSort(cards, false);
+
+const bubbleSort = (cards: TCard[], isCmc: boolean = true) => {
+    if(cards.length < 2) return cards;
+
+    for(let i = cards.length; i > 0; i--) {
+        let swapped: boolean = false;
+        for(let j = 1; j < i; j++) {
+            let firstCMC = isCmc ? cards[j - 1].manaValue : convertCurrencyToNumber(cards[j - 1].price.nonFoil);
+            let secondCMC = isCmc ? cards[j].manaValue : convertCurrencyToNumber(cards[j].price.nonFoil);
+            console.log(`First: ${firstCMC} - ${cards[j - 1].price.nonFoil}, Second: ${secondCMC}`);
+            if(firstCMC > secondCMC) {
+                let tmp = cards[j];
+                cards[j] = cards[j - 1];
+                cards[j - 1] = tmp;
+                swapped = true;
+            }
+        }
+
+        if(!swapped) {
+            break;
+        }
+    }
+
+    return cards;
+}
+
+const convertCurrencyToNumber = (currency: string) => {
+    currency = currency.replace(/[^0-9.-]+/g, '');
+    return parseFloat(currency);
 }
