@@ -1,4 +1,4 @@
-import { TCard, TDeckList, TPrice } from "./Types";
+import { sortingType, TCard, TDeckList, TPrice } from "./Types";
 import { Currency } from "./Constants";
 import * as Scry from 'scryfall-sdk';
 
@@ -79,20 +79,14 @@ export const rotateRowImages = (cardList: HTMLCollectionOf<HTMLElement>) => {
     }
 }
 
-// Bubble sort because it's fast on small collections
-export const sortByCmc = (cards: TCard[]) => bubbleSort(cards);
-
-export const sortByPrice = (cards: TCard[]) => bubbleSort(cards, false);
-
-const bubbleSort = (cards: TCard[], isCmc: boolean = true) => {
+export const bubbleSort = (cards: TCard[], sortType: sortingType) => {
     if(cards.length < 2) return cards;
 
     for(let i = cards.length; i > 0; i--) {
         let swapped: boolean = false;
         for(let j = 1; j < i; j++) {
-            let firstCMC = isCmc ? cards[j - 1].manaValue : convertCurrencyToNumber(cards[j - 1].price.nonFoil);
-            let secondCMC = isCmc ? cards[j].manaValue : convertCurrencyToNumber(cards[j].price.nonFoil);
-            console.log(`First: ${firstCMC} - ${cards[j - 1].price.nonFoil}, Second: ${secondCMC}`);
+            let firstCMC = getSortValueByType(cards[j - 1], sortType);
+            let secondCMC = getSortValueByType(cards[j], sortType);
             if(firstCMC > secondCMC) {
                 let tmp = cards[j];
                 cards[j] = cards[j - 1];
@@ -107,6 +101,36 @@ const bubbleSort = (cards: TCard[], isCmc: boolean = true) => {
     }
 
     return cards;
+}
+
+export const selectionSort = (cards: TCard[], sortType: sortingType) => {
+    let n: number = cards.length;
+    for(let i = 0; i < n - 1; i++) {
+        let minIdx = i;
+        let minVal = getSortValueByType(cards[minIdx], sortType);
+        for(let j = i + 1; j < n; j++) {
+            let valHere = getSortValueByType(cards[j], sortType);
+            if (valHere < minVal) {
+                minIdx = j;
+                minVal = valHere;
+            }
+        }
+
+        swap(cards, minIdx, i);
+    }
+
+    return cards;
+}
+
+const getSortValueByType = (card: TCard, sortType: sortingType) => {
+    return sortType === 'cmc' ? card.manaValue : 
+        sortType === 'price' ? convertCurrencyToNumber(card.price.nonFoil) : -1;
+}
+
+const swap = (arr: TCard[], i: number, j: number) => {
+    let tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
 }
 
 const convertCurrencyToNumber = (currency: string) => {

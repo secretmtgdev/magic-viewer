@@ -1,4 +1,6 @@
+import { IAlgorithmMap } from "./Interfaces"
 import { TCurrencyInfo } from "./Types"
+import { bubbleSort, selectionSort } from "./Utils"
 
 export const CardConstants = {
     DEFAULT_CARD_HEIGHT: 275,
@@ -45,4 +47,9 @@ export const TestMocks = {
             imgUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_YCalozv20Oki516pDRvDiNfByLm_OxvEZc6_XN6TIw&s'
         }
     }
+}
+
+export const SortingAlgorithmMap: IAlgorithmMap = {
+    'Bubble Sort': bubbleSort,
+    'Selection Sort': selectionSort
 }

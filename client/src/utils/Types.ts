@@ -27,3 +27,10 @@ export type TCurrencyInfo = {
     name: string;
     symbol: string;
 }
+
+/***************
+ ** DSA Types **
+ ***************/
+export type sortingType = 'cmc' | 'price';
+export type sortingFunction = (cards: TCard[], sortType: sortingType) => TCard[];
+export type searchingFunction = (cards: TCard[], prop: any) => TCard;
