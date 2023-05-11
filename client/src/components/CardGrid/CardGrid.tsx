@@ -15,7 +15,8 @@ export default function CardGrid(props: ICardGridProps) {
     const [cardCollection, setCardCollection] = useState<TCard[]>([]);
     const sortingAlgorithms: string[] = [
         'Bubble Sort',
-        'Selection Sort'
+        'Selection Sort',
+        'Insertion Sort'
     ];
 
     useEffect(() => {
@@ -34,7 +35,7 @@ export default function CardGrid(props: ICardGridProps) {
     // Handles sorting
     const handleSort = useCallback(async(sortCriteria: string) => {
         let collection: TCard[] | TCard;
-        let selection: HTMLElement | null = document.getElementById(`${sortCriteria}-picker`);
+        let selection: HTMLElement | null = document.getElementById(`${props.name}-${sortCriteria}-picker`);
         if(!selection) return;
 
         let algorithm = SortingAlgorithmMap[(selection as HTMLSelectElement).value];

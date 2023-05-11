@@ -1,6 +1,6 @@
-import { IAlgorithmMap } from "./Interfaces"
-import { TCurrencyInfo } from "./Types"
-import { bubbleSort, selectionSort } from "./Utils"
+import { IAlgorithmMap } from "./Interfaces";
+import { TCurrencyInfo } from "./Types";
+import { bubbleSort, insertionSort, selectionSort } from "./SortingAlgorithms";
 
 export const CardConstants = {
     DEFAULT_CARD_HEIGHT: 275,
@@ -51,5 +51,6 @@ export const TestMocks = {
 
 export const SortingAlgorithmMap: IAlgorithmMap = {
     'Bubble Sort': bubbleSort,
-    'Selection Sort': selectionSort
+    'Selection Sort': selectionSort,
+    'Insertion Sort': insertionSort
 }
