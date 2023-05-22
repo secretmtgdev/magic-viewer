@@ -12,17 +12,19 @@ import './Card.css';
 // Component name must start with a capital letter
 export default function Card(cardProps: ICardProps) {
     const [hiddenState, setHiddenState] = useState(true);
+    const card = cardProps.card;
 
     // Multiline jsx must be wrapped in parenthesis
     return (
         <>
             <div                  
                 onClick={() => setHiddenState(!hiddenState)}
-                id={cardProps.card.name}
+                id={card.name}
                 className='card-container'
                 >
                 <CardImage {...cardProps} />
-                <PriceContainer {...cardProps.card.price} />
+                <div>Name: {card.name}</div>
+                <PriceContainer {...card.price} />
             </div>
             <CardCallout cardProps={cardProps} hidden={hiddenState} />
         </>        

@@ -31,6 +31,8 @@ export type TCurrencyInfo = {
 /***************
  ** DSA Types **
  ***************/
+export type cipherType = 'string';
 export type sortingType = 'cmc' | 'price';
 export type sortingFunction = (cards: TCard[], sortType: sortingType) => TCard[];
 export type searchingFunction = (cards: TCard[], prop: any) => TCard;
+export type cipherFunction = (cards: TCard[]) => TCard[];

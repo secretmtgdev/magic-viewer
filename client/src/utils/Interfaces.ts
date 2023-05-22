@@ -1,4 +1,4 @@
-import { searchingFunction, sortingFunction, sortingType, TCard, TCardGroup } from "./Types";
+import { cipherFunction, cipherType, searchingFunction, sortingFunction, sortingType, TCard, TCardGroup } from "./Types";
 
 export interface ICardCalloutProps {
     cardProps: ICardProps;
@@ -28,10 +28,10 @@ export interface IDeckInformationProps {
 export interface IAlgorithmPickerProps {
     name: string;
     algorithms: string[];
-    type: sortingType;
+    type: sortingType | cipherType;
     segment: string;
 }
 
 export interface IAlgorithmMap {
-    [key: string]: sortingFunction | searchingFunction;
+    [key: string]: sortingFunction | searchingFunction | cipherFunction;
 }

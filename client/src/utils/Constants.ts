@@ -1,6 +1,7 @@
 import { IAlgorithmMap } from "./Interfaces";
 import { TCurrencyInfo } from "./Types";
-import { bubbleSort, insertionSort, selectionSort } from "./SortingAlgorithms";
+import { bubbleSort, insertionSort, mergeSort, selectionSort } from "./SortingAlgorithms";
+import { CeasarCipherDecrypt, CeasarCipherEncrypt } from "./Encryption";
 
 export const CardConstants = {
     DEFAULT_CARD_HEIGHT: 275,
@@ -52,5 +53,15 @@ export const TestMocks = {
 export const SortingAlgorithmMap: IAlgorithmMap = {
     'Bubble Sort': bubbleSort,
     'Selection Sort': selectionSort,
-    'Insertion Sort': insertionSort
+    'Insertion Sort': insertionSort,
+    'Merge Sort': mergeSort
+}
+
+export const CipherConstants = {
+    CEASAR_KEY: 3
+}
+
+export const CipherAlgorithmMap: IAlgorithmMap = {
+    'Ceasar Cipher Encrypt': CeasarCipherEncrypt,
+    'Ceasar Cipher Decrypt': CeasarCipherDecrypt
 }
