@@ -2,12 +2,12 @@ import React from 'react';
 import Card from '../Card/Card';
 
 import { useCallback, useEffect, useState } from 'react';
-import { ICardGridProps } from '../../utils/Interfaces';
-import { hashPhrase } from '../../utils/StringUtils';
-import { cipherFunction, sortingType, TCard } from '../../utils/Types';
-import { convertCollectionToCards, convertToCollection } from '../../utils/Utils';
+import { ICardGridProps } from '../../../common/utils/Interfaces';
+import { hashPhrase } from '../../../common/utils/StringUtils';
+import { cipherFunction, sortingType, TCard } from '../../../common/utils/Types';
+import { convertCollectionToCards, convertToCollection } from '../../../common/utils/Utils';
 import AlgorithmPicker from '../AlgorithmPicker/AlgorithmPicker';
-import { CipherAlgorithmMap, SortingAlgorithmMap } from '../../utils/Constants';
+import { CipherAlgorithmMap, SortingAlgorithmMap } from '../../../common/utils/Constants';
 
 // React is a JavaScript library, JSX is a syntax extension
 export default function CardGrid(props: ICardGridProps) {

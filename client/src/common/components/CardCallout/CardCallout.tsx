@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Callout } from "@fluentui/react";
-import { ICardCalloutProps } from "../../utils/Interfaces";
+import { ICardCalloutProps } from "../../../common/utils/Interfaces";
 import CardImage from "../CardImage/CardImage";
 
 import './CardCallout.css';

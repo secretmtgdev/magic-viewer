@@ -1,8 +1,8 @@
 import DeckList from './components/DeckList/DeckList';
 import React, { useEffect, useState } from 'react';
-import { getAllSets } from './utils/Utils';
+import { getAllSets } from '../common/utils/Utils';
 
-function App() {
+function DeckViewer() {
   // Load the set information
   const [allSets, setAllSets] = useState({});
   const [fetchError, setFetchError] = useState<boolean>(false);
@@ -46,4 +46,4 @@ function App() {
   )
 }
 
-export default App;
+export default DeckViewer;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { IAlgorithmPickerProps } from '../../utils/Interfaces';
+import { IAlgorithmPickerProps } from '../../../common/utils/Interfaces';
 
 /** This component is meant to be used by sorting and searching algorithms. **/
 const AlgorithmPicker = (props: IAlgorithmPickerProps) => {

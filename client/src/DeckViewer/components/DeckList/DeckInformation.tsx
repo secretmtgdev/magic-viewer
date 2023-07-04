@@ -1,8 +1,8 @@
 import React from "react";
 
-import CardGrid from "../CardGrid/CardGrid";
-import { hashPhrase } from "../../utils/StringUtils";
-import { IDeckInformationProps } from "../../utils/Interfaces";
+import CardGrid from "../../../common/components/CardGrid/CardGrid";
+import { hashPhrase } from "../../../common/utils/StringUtils";
+import { IDeckInformationProps } from "../../../common/utils/Interfaces";
 
 import './DeckList.css';
 

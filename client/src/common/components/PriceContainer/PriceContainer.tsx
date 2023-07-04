@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { TPrice } from "../../utils/Types";
-import { formalizeWord, hashPhrase } from "../../utils/StringUtils";
+import { TPrice } from "../../../common/utils/Types";
+import { formalizeWord, hashPhrase } from "../../../common/utils/StringUtils";
 
 export default function PriceContainer(priceInfo: TPrice) {
 
