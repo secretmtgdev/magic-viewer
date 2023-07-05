@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { getAllSets } from "../../common/utils/Utils";
 
+// store related
+import type { RootState } from '../utils/store';
+import { useSelector, useDispatch } from 'react-redux';
+import { setMagicSet } from "../utils/magicSetSlice";
+
 const SetSelector = () => {
     const [allSets, setAllSets] = useState<string[]>([]);
     const [fetchError, setFetchError] = useState<boolean>(false);
     const [firstLoad, setFirstLoad] = useState<boolean>(true);
+    const magicSet = useSelector((state: RootState) => state.value);
+    const dispatch = useDispatch();
     
-        useEffect(() => {
+    useEffect(() => {
         async function getAllSetData() {
             try 
             {
@@ -39,9 +46,11 @@ const SetSelector = () => {
     return (
         <>
             <label htmlFor='set-selector'>Choose a set to open:</label>
-            <select name='sets' id='set-selector'>
+            <select name='sets' id='set-selector' onChange={(e) => dispatch(setMagicSet(e.target.value))}>
                 {allSets.map((setName, idx) => <option value={setName} key={`${setName}-${idx}`}>{setName}</option>)}
             </select>
+
+            <p>Current set selected: {magicSet}</p>
         </>
     )
 }
